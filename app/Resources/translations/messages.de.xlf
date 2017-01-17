@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="symfony_is_great">
+                <source>Symfony is great</source>
+                <target>Symfony ist Groß</target>
+            </trans-unit>
+            <trans-unit id="name">
+                <source>Name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="first_name">
+                <source>First name</source>
+                <target>Vorname</target>
+            </trans-unit>
+            <trans-unit id="company">
+                <source>Company</source>
+                <target>Unternehmen</target>
+            </trans-unit>
+            <trans-unit id="email">
+                <source>Email</source>
+                <target>Email</target>
+            </trans-unit>
+            <trans-unit id="phone_number">
+                <source>Phone number</source>
+                <target>Telefonnummer</target>
+            </trans-unit>
+            <trans-unit id="message">
+                <source>Message</source>
+                <target>Nachricht</target>
+            </trans-unit>
+            <trans-unit id="send_a_copy_to_my_email">
+                <source>Send a copy to my email</source>
+                <target>Senden Sie eine Kopie an meine E-Mail</target>
+            </trans-unit>
+            <trans-unit id="type_your_message_here">
+                <source>Type your message here</source>
+                <target>Schreiben Sie ihre Nachricht hier</target>
+            </trans-unit>
+            <trans-unit id="send">
+                <source>Send</source>
+                <target>Senden</target>
+            </trans-unit>
+            <trans-unit id="thank_you_very_much_for_your_request">
+                <source>Thank you very much for your request!</source>
+                <target>Vielen Dank für Ihre Anfrage!</target>
+            </trans-unit>
+            <trans-unit id="hi">
+                <source>Hi</source>
+                <target>Hallo</target>
+            </trans-unit>
+            <trans-unit id="you_have_a_new_message_from">
+                <source>You have new message from</source>
+                <target>Sie haben eine neue Nachricht von</target>
+            </trans-unit>
+            <trans-unit id="heres_the_copy_of_your_message_to">
+                <source>Here's the copy of your message to</source>
+                <target>Hier ist die Kopie der Nachricht an</target>
+            </trans-unit>
+            <trans-unit id="new_message">
+                <source>New Message</source>
+                <target>Neue Nachricht</target>
+            </trans-unit>
+            <trans-unit id="your_message_copy">
+                <source>Your Message Copy</source>
+                <target>Ihre Nachricht Kopieren</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

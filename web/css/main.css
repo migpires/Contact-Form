@@ -1,0 +1,58 @@
+#form {
+
+    margin-top: 50px;
+
+}
+
+#form > div {
+
+    height: 50px;
+
+}
+
+#form textarea {
+
+    height: 150px;
+
+}
+
+#form div:nth-child(7) {
+
+    margin-top: 130px
+
+}
+
+#form_send {
+
+    float: right;
+
+}
+
+#lang_switch {
+
+    float: right;
+    margin-bottom: 30px
+
+}
+
+.form {
+
+  margin: 50px auto;
+  width: 50%;
+  border: 1px solid #a1a1a1;
+  padding: 30px;
+  height: 670px
+
+}
+
+.send_a_copy_to_my_email {
+
+    margin-top: 20px
+
+}
+
+.g-recaptcha {
+
+      float: left;
+
+}

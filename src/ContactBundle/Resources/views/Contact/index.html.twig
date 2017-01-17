@@ -1,0 +1,15 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+<div class="row form">
+    <div id="lang_switch">
+        <a href="{{ path('contact_lang', { '_locale': 'en' }) }}">EN</a> |
+        <a href="{{ path('contact_lang', { '_locale': 'de' }) }}">DE</a>
+    </div>
+    <div>
+        {{ form(form) }}
+    </div>
+</div>
+
+{% endblock %}

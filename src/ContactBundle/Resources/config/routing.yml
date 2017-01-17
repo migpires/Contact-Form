@@ -1,0 +1,9 @@
+contact_homepage:
+    path:     /
+    defaults: { _controller: ContactBundle:Contact:index }
+
+contact_lang:
+    path:     /{_locale}
+    defaults: { _controller: ContactBundle:Contact:index, _locale: en }
+    requirements:
+        _locale: en|de
