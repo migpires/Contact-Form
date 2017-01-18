@@ -1,7 +1,7 @@
 #Contact Form
 
 
-This repository holds a Contact Form built with Symfony 2 with field validations including Recaptcha 2 from Google. After submitted will send an email to the admin with the client data and message. The form also allows the client to send a copy of the message to his email.
+This repository holds a Contact Form built with Symfony 2 with field validations including Recaptcha 2 from Google. After submitted will send an email to the admin with the client data and message. The form also allows the client to send a copy of the message to his email. It also has a language switcher from english to german.
 
 
 
