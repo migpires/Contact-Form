@@ -33,6 +33,7 @@ To add the necessary parameters rename the file `parameters.yml.dist` in the dir
 * mailer_subject: `Email to admin subject`
 * mailer_copy_subject: `Email to client subject`
 * mailer_to: `Admin's email`
+* locale: `en`
 * recaptcha_theme: `Recaptcha theme`
 * recaptcha_type: `Recaptcha type`
 * recaptcha_size: `Recaptcha size`
