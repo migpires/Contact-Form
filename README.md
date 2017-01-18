@@ -29,15 +29,15 @@ php app/console server:run
 
 To add the necessary parameters rename the file `parameters.yml.dist` in the directory `app/config` to `parameters.yml`, then add the following parameters on this file:
 
-*mailer_name: `Contact's Form name`
-*mailer_subject: `Email to admin subject`
-*mailer_copy_subject: `Email to client subject`
-*mailer_to: `Admin's email`
-*recaptcha_theme: `Recaptcha theme`
-*recaptcha_type: `Recaptcha type`
-*recaptcha_size: `Recaptcha size`
-*recaptcha_site_key: `Recaptcha site key`
-*recaptcha_secret_key: `Recaptcha secret key`
+* mailer_name: `Contact's Form name`
+* mailer_subject: `Email to admin subject`
+* mailer_copy_subject: `Email to client subject`
+* mailer_to: `Admin's email`
+* recaptcha_theme: `Recaptcha theme`
+* recaptcha_type: `Recaptcha type`
+* recaptcha_size: `Recaptcha size`
+* recaptcha_site_key: `Recaptcha site key`
+* recaptcha_secret_key: `Recaptcha secret key`
 
 Note: To configure Swiftmailer personally I recommend to use [STMP service from Gmail](http://symfony.com/doc/current/email/gmail.html).
 
