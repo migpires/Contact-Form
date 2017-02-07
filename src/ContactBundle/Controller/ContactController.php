@@ -4,36 +4,17 @@ namespace ContactBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
-use EWZ\Bundle\RecaptchaBundle\Form\Type\EWZRecaptchaType;
-use EWZ\Bundle\RecaptchaBundle\Validator\Constraints\IsTrue as RecaptchaTrue;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use ContactBundle\Entity\Contact;
+use ContactBundle\Form\ContactType;
 
 class ContactController extends Controller
 {
     public function indexAction(Request $request)
     {
-        //Add parameters for Recaptcha
-        $theme = $this->container->getParameter('recaptcha_theme');
-        $type = $this->container->getParameter('recaptcha_type');
-        $size = $this->container->getParameter('recaptcha_size');
-
-        //Build form
-        $form = $this->createFormBuilder()
-            ->add('name', TextType::class, array('label_attr' => array('class' => 'col-md-4'), 'attr' => array('class' => 'col-md-8')))
-            ->add('first_name', TextType::class, array('label_attr' => array('class' => 'col-md-4'), 'attr' => array('class' => 'col-md-8')))
-            ->add('company', TextType::class, array('required' => false, 'label_attr' => array('class' => 'col-md-4'), 'attr' => array('class' => 'col-md-8')))
-            ->add('email', EmailType::class, array('label_attr' => array('class' => 'col-md-4'), 'attr' => array('class' => 'col-md-8')))
-            ->add('phone_number', NumberType::class, array('required' => false, 'label_attr' => array('class' => 'col-md-4'), 'attr' => array('class' => 'col-md-8')))
-            ->add('message', TextareaType::class, array('label_attr' => array('class' => 'col-md-4'), 'attr' => array('class' => 'col-md-8', 'placeholder' => 'Type your message here')))
-            ->add('send_a_copy_to_my_email', CheckboxType::class, array('required' => false, 'label_attr' => array('class' => 'col-md-4')))
-            ->add('recaptcha', EWZRecaptchaType::class, array('label' => false, 'mapped' => false, 'attr' => array('options' => array('theme' => $theme, 'type'  => $type, 'size'  => $size)), 'constraints' => array(new RecaptchaTrue())))
-            ->add('send', SubmitType::class, array('attr' => array('class' => 'btn btn-success')))
-            ->getForm();
+        $contact = new Contact();
+        $form = $this->createForm(new ContactType, $contact, array(
+            'method'=>'POST'
+        ));
 
         $form->handleRequest($request);
 
@@ -46,7 +27,7 @@ class ContactController extends Controller
             $email = $form->get('email')->getData();
             $phone_number = $form->get('phone_number')->getData();
             $message = $form->get('message')->getData();
-            $send_a_copy_to_my_email = $form->get('send_a_copy_to_my_email')->getData();
+            $send_a_copy_to_my_email = $form->get('send_copy')->getData();
             $recaptcha = $form->get('recaptcha')->getData();
 
             //Add parameters for Swiftmailer
@@ -79,7 +60,7 @@ class ContactController extends Controller
             }
 
             //Translate success message
-            $success = $this->get('translator')->trans('Thank you very much for your request!');
+            $success = $this->get('translator')->trans('Message successfully sent!');
 
             //Add message to Flashbag
             $request->getSession()->getFlashBag()->add('success', $success);

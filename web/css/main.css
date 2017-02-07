@@ -1,35 +1,31 @@
-#form {
+form button {
 
     margin-top: 50px;
 
 }
 
-#form > div {
-
-    height: 50px;
-
-}
-
-#form textarea {
+form textarea {
 
     height: 150px;
+    margin-bottom: 20px
 
 }
 
-#form div:nth-child(7) {
+form .form-group {
 
-    margin-top: 130px
+    height: 30px
 
 }
 
-#form_send {
+#form {
 
-    float: right;
+    margin-top: 50px
 
 }
 
 #lang_switch {
 
+    width: 100%;
     float: right;
     margin-bottom: 30px
 
@@ -41,13 +37,6 @@
   width: 50%;
   border: 1px solid #a1a1a1;
   padding: 30px;
-  height: 670px
-
-}
-
-.send_a_copy_to_my_email {
-
-    margin-top: 20px
 
 }
 

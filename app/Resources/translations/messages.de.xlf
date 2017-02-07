@@ -43,8 +43,8 @@
                 <target>Senden</target>
             </trans-unit>
             <trans-unit id="thank_you_very_much_for_your_request">
-                <source>Thank you very much for your request!</source>
-                <target>Vielen Dank für Ihre Anfrage!</target>
+                <source>Message successfully sent!</source>
+                <target>Mitteilung erfolgreich gesendet!</target>
             </trans-unit>
             <trans-unit id="hi">
                 <source>Hi</source>

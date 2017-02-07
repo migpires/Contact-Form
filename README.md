@@ -7,7 +7,7 @@ This repository holds a Contact Form built with Symfony 2 with field validations
 
 ##Install & Run
 
-	
+
 Open the application directory in console and run the following commands:
 
 
@@ -34,9 +34,6 @@ To add the necessary parameters rename the file `parameters.yml.dist` in the dir
 * mailer_copy_subject: `Email to client subject`
 * mailer_to: `Admin's email`
 * locale: `en`
-* recaptcha_theme: `Recaptcha theme`
-* recaptcha_type: `Recaptcha type`
-* recaptcha_size: `Recaptcha size`
 * recaptcha_site_key: `Recaptcha site key`
 * recaptcha_secret_key: `Recaptcha secret key`
 
@@ -44,7 +41,8 @@ Note: To configure Swiftmailer personally I recommend to use [STMP service from 
 
 ##Recaptcha
 
+This needs to be enabled on file config.yml, under `ewz_recaptcha` subject turn the option `enabled:` to `true`.
+
 To obtain the Recaptcha site key and secret key you need to [register your domain on Recaptcha site](https://www.google.com/recaptcha/admin#list).
 
 Note: If you're using localhost you can add your localhost address.
-
